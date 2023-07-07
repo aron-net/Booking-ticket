@@ -17,12 +17,6 @@ func main() {
 
 	greetUser()
 
-	// fmt.Printf("ConferenceTicket is %T, remainingTickets is %T, conferenceName is %T\n", conferenceTicket, remainingTickets, conferenceName)
-
-	// fmt.Printf("Welcome to %v booking application\n", conferenceName)
-	// fmt.Printf("We have the total of %v tickets and %v are still available\n", conferenceTicket, remainingTickets)
-	// fmt.Println("Get your tickets here to attend")
-
 	for {
 
 		firstName, lastName, email, userTickets := getUserInput()
@@ -32,30 +26,15 @@ func main() {
 
 		if isValidName && isValidEmail && isValidTicketNumber {
 			bookTickets(userTickets, firstName, lastName, email)
-			// fmt.Printf("The whole array: %v\n", bookings)
-			// fmt.Printf("The first value: %v\n", bookings[0])
-			// fmt.Printf("Array type: %T\n", bookings)
-			// fmt.Printf("Array length: %v\n", len(bookings))
-
-			// fmt.Printf("The whole Slice: %v\n", bookings)
-			// fmt.Printf("The first value: %v\n", bookings[0])
-			// fmt.Printf("Slice type: %T\n", bookings)
-			// fmt.Printf("Slice length: %v\n", len(bookings))
-
-			// var noTicketremaining bool = remainingTickets == 0
-			// noTicketremaining := remainingTickets == 0
-			// if noTicketremaining {
-			// 	// do somthing
-			// }
 
 			if remainingTickets == 0 {
 				//end
 				fmt.Printf("Our comference is booked out. Come back next year. \n")
 				break
 			}
-			// fmt.Println("Abrahm and Senait are planning their wedding")
+			
 		} else {
-			// fmt.Printf("We only have %v tickets remaining, so you can't  book %v tickets.\n", remainingTickets, userTickets)
+			
 			if !isValidName {
 				fmt.Println("First name or last name you entered to short")
 			}
